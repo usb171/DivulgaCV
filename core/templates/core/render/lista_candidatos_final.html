@@ -1,0 +1,38 @@
+{% load core %}
+{% load static %}
+
+<div id="id_lista_candidatos" style="display:">
+    <ul class="list-group">
+        {% for candidato in candidatos %}
+        <li class="list-group-item">
+            <div>
+                <img class="candidato" src="media/{{candidato.foto}}">
+            </div>
+            <div class="row">
+                <div class="col-12" style="margin: auto; position: relative">
+                    <div class="row" style="margin: 0px -70px 0px 0px;">
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-12" style="color: aliceblue; background: linear-gradient(90deg, rgba(98,182,227,1) 10%, rgba(64,123,166,0) 90%);">
+                                    <h2 style="margin: 5px 0px 0px 5px; text-shadow: #1026acba 0.1em 0.1em 0.2em; font-family: Intro-Black; font-size: 30px;"> {{candidato.nome}} - {{candidato.partido.sigla}} </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" style="margin: -2px 0px 0px 5px;">
+                                    <div class="votos-numero"
+                                         style="color: darkslategrey; font-size: 30px;">
+                                        <span style="color: #faef4b; font-size: larger;">{{ candidato.votos|int_format }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4" style="padding: 15px 0px 0px 0px;"><h2 id="porcentagem"
+                                                                                  style="font-size: 53px; color: aliceblue;">
+                            {{candidato.votos_porcentagem|floatformat:2}} %</h2></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

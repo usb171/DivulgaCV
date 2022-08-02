@@ -1,0 +1,126 @@
+@font-face {
+   font-family: Intro-Regular;
+   src: url(../font/intro/Intro.otf);
+}
+
+@font-face {
+   font-family: Intro-Black;
+   src: url(../font/intro/Intro-Black.otf);
+}
+
+@font-face {
+   font-family: Intro-Book;
+   src: url(../font/intro/Intro-Book.otf);
+}
+
+* {
+   font-family: Intro-Book;
+}
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+
+
+.container {
+	width: auto;
+	max-width: 680px;
+	padding: 0 15px;
+}
+
+
+.footer {
+	background-color: #f5f5f5;
+}
+
+
+.barra-topo{
+	background-color: #d7d7d752;
+	min-height: 1rem;
+	position: sticky;
+	align-items: center;
+	padding: 1.0rem 1rem;
+}
+
+
+.conteudo {
+	background-color: #d7d7d752;
+	margin-top: 7px;
+	padding: 10px;
+}
+
+
+.list-group{
+	//max-height: 500px;
+	//margin-bottom: 10px;
+	//overflow:scroll;
+	//-webkit-overflow-scrolling: touch;
+}
+
+.list-group-item{
+	padding: inherit;
+	margin: 2px 5px 2px 5px;
+	min-width: 660px; 
+	max-width: 1000px;
+	box-shadow: 7px 7px 5px #5c7a634d;
+	background-color: #ffffffab;
+	border-radius: 6px;
+}
+
+
+img {
+    max-width: 130%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 0px 8px rgb(73 85 71 / 25%);
+    margin: 3px 0px 3px 2px;
+}
+
+
+
+h2{
+	text-shadow: #454f475e 0.1em 0.1em 0.2em;
+}
+
+span{
+	text-shadow: #454f475e 0.1em 0.1em 0.2em;
+}
+
+hr{
+    border-top: 1px solid rgb(37 57 30);
+    margin-left: 14px;
+    margin-top: 21px;
+    width: 380px;
+}
+
+
+
+.votos-numero{
+	margin-bottom: -10px;
+}
+
+
+body{
+	font-family: 'Tangerine', serif;
+}
+
+main{
+	margin: 40px 0px 0px 0px;
+}
+
+
+
+

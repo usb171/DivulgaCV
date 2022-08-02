@@ -1,0 +1,56 @@
+{% extends 'core/bases/core.html' %}
+{% load static %}
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'assets/css/divulgaCV_final.css' %}">
+{% endblock %}
+{% block style %}
+<style>
+    body{
+        background-image: url("{% static 'assets/img/fundo2.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+{% endblock %}
+{% block extrabottomjs %}{% endblock %}
+{% block script %}
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+};
+
+function atualizarLista(){    
+    $.ajax({
+            type: "GET",
+            url: "/atualizar/lista?pleito=1&grupo=" + getUrlVars().grupo,
+            dataType: 'json',
+            success: function (data) {
+                $("#id_lista_candidatos").html(data.lista_candidatos);
+            }
+    });
+};
+
+atualizarLista();
+
+setInterval(function(){
+    atualizarLista();
+}, 3000);
+
+{% endblock %}
+{% block body %}
+<main role="main" class="flex-shrink-0" style="margin-top:40px; margin-left: 10px;">
+    <div class="conteudo">
+        <div class="panel panel-primary" id="result_panel" style="margin-left: 30px;">
+            <div class="panel-body container">
+                {{lista_candidatos | safe}}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load core %}
+
+<ul class="list-group" id="id_lista_candidatos">
+    {% for candidato in candidatos %}
+        <li class="list-group-item">
+        <div class="row">
+            <div class="col-2">
+                <img src="media/{{candidato.foto}}">
+            </div>
+            <div class="col-10" style="margin: auto;">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12"><h2 style="margin: 20px -200px -10px 10px;">{{candidato.nome}}</h2></div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6"><h2 style="margin: 0px 0px 0px 10px;">{{candidato.partido.sigla}}</h2></div>
+                            <div class="col-6" style="text-align: end;">
+                                <div class="votos-numero"><span id='span1'>{{candidato.votos}}</span></div>
+                                <div class="votos-texto"><span>votos</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4" style="padding: 90px 0px 0px 40px;"><h2 id="porcentagem">
+                        {{candidato.votos_porcentagem|floatformat:2}} %</h2></div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

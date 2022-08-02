@@ -1,0 +1,29 @@
+{% extends 'core/bases/core.html' %}
+{% load static %}
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'assets/css/divulgaCV.css' %}">
+{% endblock %}
+{% block style %}
+<style>
+    body{
+        background-image: url("{% static 'assets/img/fundo02.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+{% block extrabottomjs %}{% endblock %}
+{% block script %}
+{% endblock %}
+{% block body %}
+    <main role="main" class="flex-shrink-0">
+    <div class="conteudo">
+        <div class="panel panel-primary" id="result_panel">
+            <div class="panel-body container">
+                {{formulario | safe}}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

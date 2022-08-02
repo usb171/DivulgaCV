@@ -1,0 +1,70 @@
+{% extends 'core/bases/core.html' %}
+{% load static %}
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'assets/css/divulgaCV_final.css' %}">
+{% endblock %}
+{% block style %}
+<style>
+    body{
+        background-image: url("{% static 'assets/img/fundo02.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+{% block extrabottomjs %}{% endblock %}
+{% block script %}{% endblock %}
+{% block body %}
+
+    <main role="main" class="flex-shrink-0" style="margin-top:40px; margin-left: 10px;">
+    <div class="conteudo">
+        <div class="panel-body container" style="">    
+            <h1 style="color: #dfebe7;text-align: center;">APURAÇÃO - AO VIVO</h1> 
+            <div class="panel-body container">                
+               <div class="row">
+                  <div class="col-sm-6">
+                    <a style="color: #3f534c;text-decoration: none;background-color: transparent;text-align: center;" class="card-text" href="{% url 'senador' %}">
+                        <div class="card">
+                          <div class="card-body">
+                            <h1 style="padding-top: 9px;">Senador</h1>
+                          </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a style="color: #3f534c;text-decoration: none;background-color: transparent;text-align: center;" class="card-text" href="{% url 'governador' %}">
+                        <div class="card">
+                          <div class="card-body">
+                            <h1 style="padding-top: 9px;">Governador</h1>
+                          </div>
+                        </div>
+                    </a>
+                  </div>     
+            </div>
+        </div>
+            <div class="panel-body container" style="padding-top: 100px;">    
+                <h1 style="color: #dfebe7;text-align: center;">LANÇAMENTO</h1>            
+               <div class="row">
+                  <div class="col-sm-6">
+                    <a style="color: #3f534c;text-decoration: none;background-color: transparent;text-align: center;" class="card-text" href="{% url 'lancamentoSenador' %}">
+                        <div class="card">
+                          <div class="card-body">
+                            <h1 style="padding-top: 9px;">Senador</h1>
+                          </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a style="color: #3f534c;text-decoration: none;background-color: transparent;text-align: center;" class="card-text" href="{% url 'lancamentoGovernador' %}">
+                        <div class="card">
+                          <div class="card-body">
+                            <h1 style="padding-top: 9px;">Governador</h1>
+                          </div>
+                        </div>
+                    </a>
+                  </div>     
+            </div>
+    </div>
+</main>
+{% endblock %}
