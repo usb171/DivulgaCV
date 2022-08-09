@@ -6,8 +6,7 @@
 {% block style %}
 <style>
     body{
-        background-image: url("{% static 'assets/img/fundo2.png' %}"); fundo2022.jfif
-        
+        background-image: url("../media/{{pleito.cartela}}");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -29,7 +28,7 @@ function getUrlVars() {
 function atualizarLista(){    
     $.ajax({
             type: "GET",
-            url: "/atualizar/lista?pleito=2&grupo=" + getUrlVars().grupo,
+            url: "/atualizar/lista?pleito={{pleito.id}}&grupo=" + getUrlVars().grupo,
             dataType: 'json',
             success: function (data) {
                 $("#id_lista_candidatos").html(data.lista_candidatos);

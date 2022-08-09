@@ -3,9 +3,7 @@ from .views import Core, CoreAjax
 
 urlpatterns = [
     path('', Core.index, name='index'),
-    path('governador', Core.governador, name='governador'),
-    path('senador', Core.senador, name='senador'),
-    path('lancamento/governador', Core.lancamentoGovernador, name='lancamentoGovernador'),
-    path('lancamento/senador', Core.lancamentoSenador, name='lancamentoSenador'),
+    path('apuracao/<int:id_pleito>', Core.apuracao, name='apuracao'),
+    path('lancamento/<int:id_pleito>', Core.lancamento, name='lancamento'),
     path('atualizar/lista', CoreAjax.atualizarLista, name='atualizar_lista'),
 ]
